@@ -1,0 +1,7 @@
+$color-back-gradient: linear-gradient(#d84e4e, #f08080, #f08080, #f08080);
+$inverse-color-back-gradient: linear-gradient(#d84e4e, #f08080, #f08080, #f08080);
+$start-color:#d84e4e;
+$end-color:#f08080;
+@mixin diagBg($grad, $color, $porc) {
+    background: linear-gradient($grad, $color $porc, #fff 50%);
+}

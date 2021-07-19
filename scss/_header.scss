@@ -1,0 +1,74 @@
+/* * ========================================================== */
+
+
+/* * ========================= Header ======================== */
+
+
+/* * ========================================================== */
+
+.header {
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    &__nav {
+        display: block;
+        position: absolute;
+        &--backgroundColor {
+            background-image: $color-back-gradient;
+        }
+        &__logo {
+            &--sm {
+                height: 30px;
+            }
+        }
+        &__icon {
+            opacity: 50%;
+            width: 1rem;
+            align-self: center;
+        }
+        &--font {
+            color: #fff;
+            font-size: $f-sm;
+            line-height: 1.5rem;
+            text-align: center;
+        }
+    }
+}
+
+
+/** Modificacion clase Bootstrap**/
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-light .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem;
+}
+
+
+/* * ========================================================== */
+
+
+/* * ========================= Queries ======================== */
+
+
+/* * ========================================================== */
+
+
+/* * ===================== Header 1024px ====================== */
+
+
+/*     @media only screen and (min-width: 1024px) {
+        header {
+            height: 50vh;
+        }
+        #headerGrid {
+            height: 50vh;
+        }
+    } */

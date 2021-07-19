@@ -1,0 +1,23 @@
+.algarrobo {
+    font-family: $f--main;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 100%;
+            margin: 1rem;
+        }
+    }
+    &__detalle {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* 
+QUERY
+
+display: grid;
+        grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
+        grid-template-columns: 100%; */

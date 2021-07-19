@@ -1,0 +1,17 @@
+@mixin font ($family, $size, $color) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+
+$f--main: "Open Sans",
+sans-serif;
+$f--title:'Bebas Neue',
+cursive;
+$f--main--alternative: "Montserrat",
+sans-serif;
+$f--title-alternative: 'Staatliches',
+cursive;
+$f-sm: 16px;
+$f-md: 24px;
+$f-lg: 64px;

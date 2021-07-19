@@ -1,0 +1,61 @@
+.catalogo {
+    padding: 0%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    & li {
+        display: inline-flex;
+        flex-basis: 10em;
+    }
+}
+
+.rightCenter {
+    position: absolute;
+    margin: 1rem
+}
+
+.product {
+    box-shadow: 1px 5px 15px #CCC;
+    width: 50%;
+    height: auto;
+    border-radius: 3px;
+    padding: 1em;
+    margin: 1em;
+    overflow: hidden;
+    position: relative;
+    flex: auto;
+    &--color {
+        @extend .product;
+        @include diagBg(-30deg, $end-color, 25%);
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    &__tarjeta {
+        display: flex;
+        align-items: center;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        p {
+            align-self: center;
+            color: #000;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+/* Modificaciones bootstrap */
+
+.modal-body {
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}

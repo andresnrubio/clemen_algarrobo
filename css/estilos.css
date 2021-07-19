@@ -1,0 +1,424 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif, "Montserrat", sans-serif;
+  font-size: 16px; }
+
+#body__background {
+  width: 100%;
+  background-image: url(../media/background_light.png);
+  background-size: 100%;
+  padding: 0;
+  margin: 0; }
+
+/* * ========================================================== */
+/* * ========================= Header ======================== */
+/* * ========================================================== */
+.header {
+  display: flex;
+  position: sticky;
+  flex-direction: column; }
+  .header__nav {
+    display: block;
+    position: absolute; }
+    .header__nav--backgroundColor {
+      background-image: linear-gradient(#d84e4e, #f08080, #f08080, #f08080); }
+    .header__nav__logo--sm {
+      height: 30px; }
+    .header__nav__icon {
+      opacity: 50%;
+      width: 1rem;
+      align-self: center; }
+    .header__nav--font {
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.5rem;
+      text-align: center; }
+
+/** Modificacion clase Bootstrap**/
+.navbar-light .navbar-nav .nav-link {
+  color: #fff; }
+
+.navbar-light .navbar-toggler {
+  color: #fff;
+  border-color: #fff; }
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem; }
+
+/* * ========================================================== */
+/* * ========================= Queries ======================== */
+/* * ========================================================== */
+/* * ===================== Header 1024px ====================== */
+/*     @media only screen and (min-width: 1024px) {
+        header {
+            height: 50vh;
+        }
+        #headerGrid {
+            height: 50vh;
+        }
+    } */
+/* * ========================================================== */
+/* * ========================== Main ========================== */
+/* * ========================================================== */
+.portada {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center; }
+  .portada__background {
+    height: 25vh;
+    background-image: url(../media/imagenHeader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: 50%; }
+  .portada__logo {
+    flex-basis: 64px;
+    width: 50%;
+    max-width: 500px; }
+    .portada__logo img {
+      width: 100%; }
+  .portada h1 {
+    width: 70%;
+    text-align: center;
+    text-justify: center;
+    font-family: "Bebas Neue", cursive, "Staatliches", cursive;
+    color: #fff;
+    letter-spacing: 0.2rem; }
+
+.principal {
+  margin-top: 2rem;
+  display: flex;
+  align-content: space-around;
+  flex-flow: column wrap;
+  flex-wrap: wrap; }
+  .principal__card {
+    align-self: center;
+    border-radius: 3%;
+    margin: 1rem;
+    min-height: 35vh; }
+  .principal__img {
+    display: block;
+    align-self: center;
+    justify-self: center; }
+    .principal__img--size {
+      max-width: 50%; }
+  .principal h5 {
+    font-size: 24px; }
+  .principal p {
+    font-size: 16px; }
+
+.resumen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+
+.cardInfo {
+  padding: 1em;
+  align-content: center;
+  margin: 1rem;
+  min-width: 15rem; }
+  .cardInfo img {
+    max-width: 5rem; }
+
+.mapa {
+  display: flex;
+  position: relative;
+  align-content: center;
+  width: 100%; }
+  .mapa__direccion {
+    display: block;
+    background-color: #000;
+    width: 100%;
+    margin: 0;
+    margin-top: 6vh;
+    position: absolute;
+    z-index: 1;
+    border-top: #3f3f3f 1px solid;
+    border-bottom: #3f3f3f 1px solid; }
+    .mapa__direccion--style {
+      font-family: "Bebas Neue", cursive, "Staatliches", cursive;
+      font-size: 16px;
+      text-align: center;
+      color: #fff;
+      margin: 0;
+      letter-spacing: 0.2rem; }
+  .mapa iframe {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 20vh; }
+
+/* * ========================================================== */
+/* * ========================= Queries ======================== */
+/* * ========================================================== */
+/* * ====================== Main 768px ======================== */
+@media only screen and (min-width: 768px) {
+  .principal__card {
+    min-height: 0; }
+  .principal__img--size {
+    max-width: 100%; }
+  .cardInfo {
+    max-width: 35rem; } }
+
+/* * ====================== Main 1024px ======================= */
+@media only screen and (min-width: 1024px) {
+  .principal__card {
+    min-height: 0; }
+  .principal__img--size {
+    max-width: 100%; }
+  .resumen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; }
+  .cardInfo {
+    max-width: 25rem; } }
+
+/* * ====================== Main 1440px ======================= */
+@media only screen and (min-width: 1440px) {
+  .principal__card {
+    min-height: 0; }
+  .principal__img--size {
+    max-width: 100%; } }
+
+/* * ========================================================== */
+/* * ========================= Footer ========================= */
+/* * ========================================================== */
+#gridFooter {
+  display: grid;
+  grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
+  grid-template-columns: 100%; }
+
+.footer {
+  background-image: linear-gradient(#d84e4e, #f08080, #f08080, #f08080); }
+  .footer h4 {
+    font-size: 16px;
+    grid-area: 0;
+    display: 0;
+    align-self: center;
+    justify-self: 0;
+    margin: 1em 1em 0em 0em; }
+  .footer__whatsapp {
+    grid-area: whatsapp;
+    display: flex;
+    align-self: center;
+    justify-self: 0;
+    margin: 0em 0em 0em 2em; }
+  .footer__telefono {
+    grid-area: telefono;
+    display: flex;
+    align-self: center;
+    justify-self: 0;
+    margin: 0em 0em 0em 2em; }
+  .footer__correo {
+    grid-area: correo;
+    display: flex;
+    align-self: center;
+    justify-self: 0;
+    margin: 0em 0em 0em 2em; }
+  .footer__redes {
+    grid-area: redes;
+    display: 0;
+    align-self: 0;
+    justify-self: 0;
+    margin: 0em 0em 1em 2em; }
+  .footer__facebook {
+    grid-area: 0;
+    display: flex;
+    align-self: 0;
+    justify-self: end;
+    margin: 0em 2em 0em 0em; }
+  .footer__instagram {
+    grid-area: 0;
+    display: flex;
+    align-self: 0;
+    justify-self: end;
+    margin: 0em 2em 0em 0em; }
+  .footer__icono {
+    display: inline-flex;
+    margin: 1em 1em 0em 0em; }
+    .footer__icono--sm {
+      width: 1.5em; }
+    .footer__icono--md {
+      width: 2em; }
+    .footer__icono--lg {
+      width: 2.5em; }
+  .footer__logo {
+    grid-area: logo;
+    display: 0;
+    align-self: center;
+    justify-self: center;
+    margin: 1em 0em 0em 0em;
+    width: 30%;
+    min-width: 150px; }
+  .footer__horarios {
+    grid-area: horarios;
+    display: 0;
+    align-self: center;
+    justify-self: 0;
+    margin: 0.5em 0em 0em 0em;
+    text-align: center; }
+
+/* * ========================================================== */
+/* * ========================= Queries ======================== */
+/* * ========================================================== */
+/* * ====================== Footer 1024px ======================= */
+@media only screen and (min-width: 1024px) {
+  .footer__logo {
+    justify-self: flex-start;
+    max-width: 100px;
+    margin-left: 2rem; }
+  .footer__horarios {
+    grid-area: horarios;
+    text-align: center;
+    justify-self: flex-start;
+    max-width: 200px;
+    margin-left: 2rem; } }
+
+/* * ====================== Footer 1440px ======================= */
+@media only screen and (min-width: 1440px) {
+  #gridFooter {
+    background-color: linear-gradient(#d84e4e, #f08080, #f08080, #f08080);
+    display: grid;
+    grid-template-areas: "whatsapp logo redes" "telefono horarios redes" "correo horarios redes";
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 1fr 1fr 1fr; }
+  .footer__logo {
+    grid-area: logo;
+    min-width: 200px;
+    justify-self: center;
+    margin: 0; }
+  .footer__horarios {
+    grid-area: horarios;
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 1em;
+    margin-top: 0em; }
+  .footer__redes {
+    justify-self: end;
+    grid-area: redes;
+    align-self: center;
+    margin-right: 2em; } }
+
+/* * ========================================================== */
+/* * ========================= Paginas ======================== */
+/* * ========================================================== */
+.algarrobo {
+  font-family: "Open Sans", sans-serif; }
+  .algarrobo__info {
+    display: flex;
+    flex-direction: column; }
+    .algarrobo__info img {
+      width: 100%;
+      margin: 1rem; }
+  .algarrobo__detalle {
+    display: flex;
+    flex-direction: column; }
+
+/* 
+QUERY
+
+display: grid;
+        grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
+        grid-template-columns: 100%; */
+.catalogo {
+  padding: 0%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  .catalogo li {
+    display: inline-flex;
+    flex-basis: 10em; }
+
+.rightCenter {
+  position: absolute;
+  margin: 1rem; }
+
+.product, .product--color {
+  box-shadow: 1px 5px 15px #CCC;
+  width: 50%;
+  height: auto;
+  border-radius: 3px;
+  padding: 1em;
+  margin: 1em;
+  overflow: hidden;
+  position: relative;
+  flex: auto; }
+  .product--color {
+    background: linear-gradient(-30deg, #f08080 25%, #fff 50%); }
+  .product img, .product--color img {
+    max-width: 100%;
+    height: auto;
+    text-align: center; }
+  .product__tarjeta {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%; }
+    .product__tarjeta p {
+      align-self: center;
+      color: #000;
+      margin-bottom: 0; }
+
+/* Modificaciones bootstrap */
+.modal-body {
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; }
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  padding: 1em; }
+  .contacto form {
+    background: linear-gradient(-15deg, #f08080 40%, #fff 50%);
+    box-shadow: 1px 5px 15px #CCC;
+    padding: 0.1rem;
+    border-radius: 3px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .contacto form div {
+      margin: 0.2rem; }
+
+#consulta {
+  width: 100%;
+  height: 5rem;
+  overflow: auto; }
+
+/* * ========================================================== */
+/* * ========================= Queries ======================== */
+/* * ========================================================== */
+/* * ========================================================== */
+/* * ======================== Query 768 ======================= */
+/* * ========================================================== */
+@media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+  #body__background {
+    background-image: url(../media/background_light.png);
+    background-size: 50%; } }
+
+/* * ========================================================== */
+/* * ======================= Query 1024 ======================= */
+/* * ========================================================== */
+@media only screen and (min-width: 1024px) {
+  #body__background {
+    background-image: url(../media/background_light.png);
+    background-size: 25%; } }
+
+/* * ========================================================== */
+/* * ======================= Query 1440 ======================= */
+/* * ========================================================== */

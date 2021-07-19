@@ -1,0 +1,54 @@
+                    @import 'colors.scss';
+                    @import 'fonts.scss';
+                    * {
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                        font-family: $f--main, $f--main--alternative;
+                        font-size: 16px;
+                    }
+                    
+                    #body__background {
+                        width: 100%;
+                        background-image: url(../media/background_light.png);
+                        background-size: 100%;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    
+                    @import 'header.scss';
+                    @import 'main.scss';
+                    @import 'footer.scss';
+                    /* * ========================================================== */
+                    /* * ========================= Paginas ======================== */
+                    /* * ========================================================== */
+                    
+                    @import 'algarrobo.scss';
+                    @import 'productos.scss';
+                    @import 'contacto.scss';
+                    /* * ========================================================== */
+                    /* * ========================= Queries ======================== */
+                    /* * ========================================================== */
+                    /* * ========================================================== */
+                    /* * ======================== Query 768 ======================= */
+                    /* * ========================================================== */
+                    
+                    @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+                        #body__background {
+                            background-image: url(../media/background_light.png);
+                            background-size: 50%;
+                        }
+                    }
+                    /* * ========================================================== */
+                    /* * ======================= Query 1024 ======================= */
+                    /* * ========================================================== */
+                    
+                    @media only screen and (min-width: 1024px) {
+                        #body__background {
+                            background-image: url(../media/background_light.png);
+                            background-size: 25%;
+                        }
+                    }
+                    /* * ========================================================== */
+                    /* * ======================= Query 1440 ======================= */
+                    /* * ========================================================== */
