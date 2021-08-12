@@ -1,85 +1,111 @@
-/* * ========================================================== */
-
-
-/* * ========================= Footer ========================= */
-
-
-/* * ========================================================== */
-
-@mixin redes-contacto ($gridArea, $display, $align, $justify, $margin) {
-    grid-area: $gridArea;
-    display: $display;
-    align-self: $align;
-    justify-self: $justify;
-    margin: $margin;
-}
-
-#gridFooter {
-    display: grid;
-    grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
-    grid-template-columns: 100%;
-}
-
-.footer {
-    background-image: $inverse-color-back-gradient;
-    & h4 {
-        font-size: $f-sm;
-        @include redes-contacto (0, 0, center, 0, 1em 1em 0em 0em);
-    }
-    &__whatsapp {
-        @include redes-contacto (whatsapp, flex, center, 0, 0em 0em 0em 2em);
-    }
-    &__telefono {
-        @include redes-contacto (telefono, flex, center, 0, 0em 0em 0em 2em);
-    }
-    &__correo {
-        @include redes-contacto (correo, flex, center, 0, 0em 0em 0em 2em);
-    }
-    &__redes {
-        @include redes-contacto (redes, 0, 0, 0, 0em 0em 1em 2em);
-    }
-    &__facebook {
-        @include redes-contacto (0, flex, 0, end, 0em 2em 0em 0em);
-    }
-    &__instagram {
-        @include redes-contacto (0, flex, 0, end, 0em 2em 0em 0em);
-    }
-    &__icono {
-        display: inline-flex;
-        margin: 1em 1em 0em 0em;
-        &--sm {
-            width: 1.5em;
+        /* * ========================================================== */
+        /* * ========================= Footer ========================= */
+        /* * ========================================================== */
+        
+        @mixin redes-contacto ($gridArea, $display, $align, $justify, $margin) {
+            grid-area: $gridArea;
+            display: $display;
+            align-self: $align;
+            justify-self: $justify;
+            margin: $margin;
         }
-        &--md {
-            width: 2em;
+        
+        #gridFooter {
+            display: grid;
+            grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
+            grid-template-columns: 100%;
         }
-        &--lg {
-            width: 2.5em;
+        
+        .footer {
+            background-image: $inverse-color-back-gradient;
+            & h4 {
+                font-size: $f-sm;
+                color: #212529;
+                @include redes-contacto (0, 0, center, 0, 1em 1em 0em 0em);
+            }
+            &__whatsapp {
+                @include redes-contacto (whatsapp, flex, center, 0, 0em 0em 0em 2em);
+                justify-content: flex-start
+            }
+            &__telefono {
+                @include redes-contacto (telefono, flex, center, 0, 0em 0em 0em 2em);
+                justify-content: flex-start
+            }
+            &__correo {
+                @include redes-contacto (correo, flex, center, 0, 0em 0em 0em 2em);
+                justify-content: flex-start
+            }
+            &__redes {
+                @include redes-contacto (redes, 0, 0, 0, 1em 1em 1em 1em);
+                justify-content: center;
+            }
+            &__facebook {
+                @include redes-contacto (0, block, 0, 0, auto);
+            }
+            &__icono {
+                display: inline-flex;
+                margin: 1em 1em 0em 0em;
+                &--sm {
+                    width: 1.5em;
+                }
+                &--md {
+                    width: 2em;
+                }
+                &--lg {
+                    width: 2.5em;
+                }
+            }
+            &__logo {
+                @include redes-contacto (logo, 0, center, center, 1em 0em 0em 0em);
+                width: 30%;
+                min-width: 150px;
+            }
+            &__horarios {
+                @include redes-contacto (horarios, 0, center, 0, 0.5em 0em 0em 0em);
+                text-align: center;
+            }
+            a {
+                text-decoration: none;
+            }
         }
-    }
-    &__logo {
-        @include redes-contacto (logo, 0, center, center, 1em 0em 0em 0em);
-        width: 30%;
-        min-width: 150px;
-    }
-    &__horarios {
-        @include redes-contacto (horarios, 0, center, 0, 0.5em 0em 0em 0em);
-        text-align: center;
-    }
-}
-
-
-/* * ========================================================== */
-
-
-/* * ========================= Queries ======================== */
-
-
-/* * ========================================================== */
-
-
-/* * ====================== Footer 1024px ======================= */
-
+        
+        .facebookBox {
+            display: flex;
+            iframe {
+                margin: auto;
+            }
+        }
+        /* * ========================================================== */
+        /* * ========================= Queries ======================== */
+        /* * ========================================================== */
+        /* * ====================== Footer 768px ======================= */
+        
+        @media only screen and (min-width: 768px) {
+            #gridFooter {
+                display: grid;
+                grid-template-areas: "redes" "horarios""redes" "whatsapp" "telefono" "correo";
+                grid-template-columns: 100%;
+            }
+            /*  .footer {
+        &__whatsapp {
+            @include redes-contacto (whatsapp, flex, center, 0, 0em 0em 0em 2em);
+            justify-content: center;
+        }
+        &__telefono {
+            @include redes-contacto (telefono, flex, center, 0, 0em 0em 0em 2em);
+            justify-content: center;
+        }
+        &__correo {
+            @include redes-contacto (correo, flex, center, 0, 0em 0em 0em 2em);
+            justify-content: center;
+        }
+        &__redes {
+            @include redes-contacto (redes, 0, 0, 0, 1em 1em 1em 1em);
+            justify-content: center;
+        }
+    } */
+            /* * ====================== Footer 1024px ======================= */
+            /* 
 @media only screen and (min-width: 1024px) {
     .footer {
         &__logo {
@@ -96,38 +122,35 @@
         }
     }
 }
-
-
-/* * ====================== Footer 1440px ======================= */
-
-@media only screen and (min-width: 1440px) {
-    #gridFooter {
-        background-color: $inverse-color-back-gradient;
-        display: grid;
-        grid-template-areas: "whatsapp logo redes" "telefono horarios redes" "correo horarios redes";
-        grid-template-columns: 30% 40% 30%;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-    .footer {
-        &__logo {
-            grid-area: logo;
-            min-width: 200px;
-            justify-self: center;
-            margin: 0;
+ */
+            /* * ====================== Footer 1440px ======================= */
+            @media only screen and (min-width: 1024px) {
+                #gridFooter {
+                    background-color: $inverse-color-back-gradient;
+                    display: grid;
+                    grid-template-areas: "redes  logo " "redes horarios " "redes whatsapp ""redes telefono""redes correo";
+                    grid-template-columns: 40% 60%;
+                    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                }
+                .footer {
+                    &__logo {
+                        grid-area: logo;
+                        max-width: 500px;
+                        min-width: 200px;
+                        justify-self: flex-start;
+                        margin: 0;
+                    }
+                    &__horarios {
+                        grid-area: horarios;
+                        justify-self: flex-start;
+                        text-align: center;
+                        align-self: center;
+                        margin-bottom: 1em;
+                        margin-top: 0em;
+                    }
+                    &__redes {
+                        grid-area: redes;
+                    }
+                }
+            }
         }
-        &__horarios {
-            grid-area: horarios;
-            justify-self: center;
-            text-align: center;
-            align-self: center;
-            margin-bottom: 1em;
-            margin-top: 0em;
-        }
-        &__redes {
-            justify-self: end;
-            grid-area: redes;
-            align-self: center;
-            margin-right: 2em;
-        }
-    }
-}

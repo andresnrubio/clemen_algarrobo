@@ -47,13 +47,16 @@
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0.15rem; }
 
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end; }
+
 /* * ========================================================== */
 /* * ========================= Queries ======================== */
 /* * ========================================================== */
 /* * ===================== Header 1024px ====================== */
 /*     @media only screen and (min-width: 1024px) {
         header {
-            height: 50vh;
+            width
         }
         #headerGrid {
             height: 50vh;
@@ -70,7 +73,6 @@
   justify-content: center;
   align-content: center; }
   .portada__background {
-    height: 25vh;
     background-image: url(../media/imagenHeader.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,12 +82,14 @@
   .portada__logo {
     flex-basis: 64px;
     width: 50%;
+    padding-top: 2rem;
     max-width: 500px; }
     .portada__logo img {
       width: 100%; }
   .portada h1 {
     width: 70%;
     text-align: center;
+    padding-bottom: 2rem;
     text-justify: center;
     font-family: "Bebas Neue", cursive, "Staatliches", cursive;
     color: #fff;
@@ -98,20 +102,29 @@
   flex-flow: column wrap;
   flex-wrap: wrap; }
   .principal__card {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
     align-self: center;
     border-radius: 3%;
     margin: 1rem;
-    min-height: 35vh; }
+    min-height: 340px;
+    max-height: 350px; }
   .principal__img {
-    display: block;
+    display: flex;
     align-self: center;
-    justify-self: center; }
+    justify-self: center;
+    margin: 1rem; }
     .principal__img--size {
       max-width: 50%; }
   .principal h5 {
     font-size: 24px; }
   .principal p {
     font-size: 16px; }
+
+.center {
+  display: flex;
+  justify-content: center; }
 
 .resumen {
   display: flex;
@@ -122,10 +135,18 @@
 .cardInfo {
   padding: 1em;
   align-content: center;
+  min-height: 280px;
   margin: 1rem;
   min-width: 15rem; }
   .cardInfo img {
     max-width: 5rem; }
+  .cardInfo p {
+    text-align: center; }
+  .cardInfo ul {
+    list-style: none; }
+  .cardInfo li {
+    text-align: center;
+    margin: 0; }
 
 .mapa {
   display: flex;
@@ -155,24 +176,58 @@
     width: 100%;
     height: 20vh; }
 
+/* * ========================= Modificacion Bootstrap ======================== */
+.row {
+  display: flex;
+  justify-content: center; }
+
 /* * ========================================================== */
 /* * ========================= Queries ======================== */
 /* * ========================================================== */
 /* * ====================== Main 768px ======================== */
 @media only screen and (min-width: 768px) {
+  .portada__logo {
+    flex-basis: 64px;
+    width: 50%;
+    padding-top: 2rem;
+    max-width: 300px; }
+    .portada__logo img {
+      width: 100%; }
   .principal__card {
     min-height: 0; }
   .principal__img--size {
     max-width: 100%; }
+  .resumen {
+    flex-wrap: nowrap; }
   .cardInfo {
-    max-width: 35rem; } }
+    max-width: 35rem;
+    max-height: 20rem; }
+  /** Modificacion clase Bootstrap**/
+  .carousel {
+    height: 50%; }
+  .centerCarousel {
+    margin: auto;
+    width: 50% !important; } }
 
 /* * ====================== Main 1024px ======================= */
 @media only screen and (min-width: 1024px) {
-  .principal__card {
-    min-height: 0; }
-  .principal__img--size {
-    max-width: 100%; }
+  /*       .portada {
+                &__background {}
+                &__logo {
+                    padding-top: 2rem;
+                }
+                & h1 {}
+            }
+            .principal {
+                &__card {
+                    min-height: 0;
+                }
+                &__img {
+                    &--size {
+                        max-width: 100%;
+                    }
+                }
+            } */
   .resumen {
     display: flex;
     flex-direction: row;
@@ -188,6 +243,11 @@
   .principal__img--size {
     max-width: 100%; } }
 
+@media only screen and (min-width: 1440px) {
+  main {
+    max-width: 1440px;
+    margin: auto; } }
+
 /* * ========================================================== */
 /* * ========================= Footer ========================= */
 /* * ========================================================== */
@@ -200,6 +260,7 @@
   background-image: linear-gradient(#d84e4e, #f08080, #f08080, #f08080); }
   .footer h4 {
     font-size: 16px;
+    color: #212529;
     grid-area: 0;
     display: 0;
     align-self: center;
@@ -210,37 +271,35 @@
     display: flex;
     align-self: center;
     justify-self: 0;
-    margin: 0em 0em 0em 2em; }
+    margin: 0em 0em 0em 2em;
+    justify-content: flex-start; }
   .footer__telefono {
     grid-area: telefono;
     display: flex;
     align-self: center;
     justify-self: 0;
-    margin: 0em 0em 0em 2em; }
+    margin: 0em 0em 0em 2em;
+    justify-content: flex-start; }
   .footer__correo {
     grid-area: correo;
     display: flex;
     align-self: center;
     justify-self: 0;
-    margin: 0em 0em 0em 2em; }
+    margin: 0em 0em 0em 2em;
+    justify-content: flex-start; }
   .footer__redes {
     grid-area: redes;
     display: 0;
     align-self: 0;
     justify-self: 0;
-    margin: 0em 0em 1em 2em; }
+    margin: 1em 1em 1em 1em;
+    justify-content: center; }
   .footer__facebook {
     grid-area: 0;
-    display: flex;
+    display: block;
     align-self: 0;
-    justify-self: end;
-    margin: 0em 2em 0em 0em; }
-  .footer__instagram {
-    grid-area: 0;
-    display: flex;
-    align-self: 0;
-    justify-self: end;
-    margin: 0em 2em 0em 0em; }
+    justify-self: 0;
+    margin: auto; }
   .footer__icono {
     display: inline-flex;
     margin: 1em 1em 0em 0em; }
@@ -265,48 +324,84 @@
     justify-self: 0;
     margin: 0.5em 0em 0em 0em;
     text-align: center; }
+  .footer a {
+    text-decoration: none; }
+
+.facebookBox {
+  display: flex; }
+  .facebookBox iframe {
+    margin: auto; }
 
 /* * ========================================================== */
 /* * ========================= Queries ======================== */
 /* * ========================================================== */
-/* * ====================== Footer 1024px ======================= */
+/* * ====================== Footer 768px ======================= */
+@media only screen and (min-width: 768px) {
+  #gridFooter {
+    display: grid;
+    grid-template-areas: "redes" "horarios" "redes" "whatsapp" "telefono" "correo";
+    grid-template-columns: 100%; }
+  /*  .footer {
+        &__whatsapp {
+            @include redes-contacto (whatsapp, flex, center, 0, 0em 0em 0em 2em);
+            justify-content: center;
+        }
+        &__telefono {
+            @include redes-contacto (telefono, flex, center, 0, 0em 0em 0em 2em);
+            justify-content: center;
+        }
+        &__correo {
+            @include redes-contacto (correo, flex, center, 0, 0em 0em 0em 2em);
+            justify-content: center;
+        }
+        &__redes {
+            @include redes-contacto (redes, 0, 0, 0, 1em 1em 1em 1em);
+            justify-content: center;
+        }
+    } */
+  /* * ====================== Footer 1024px ======================= */
+  /* 
 @media only screen and (min-width: 1024px) {
-  .footer__logo {
-    justify-self: flex-start;
-    max-width: 100px;
-    margin-left: 2rem; }
-  .footer__horarios {
-    grid-area: horarios;
-    text-align: center;
-    justify-self: flex-start;
-    max-width: 200px;
-    margin-left: 2rem; } }
+    .footer {
+        &__logo {
+            justify-self: flex-start;
+            max-width: 100px;
+            margin-left: 2rem;
+        }
+        &__horarios {
+            grid-area: horarios;
+            text-align: center;
+            justify-self: flex-start;
+            max-width: 200px;
+            margin-left: 2rem;
+        }
+    }
+}
+ */
+  /* * ====================== Footer 1440px ======================= */ }
 
-/* * ====================== Footer 1440px ======================= */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) and (min-width: 1024px) {
   #gridFooter {
     background-color: linear-gradient(#d84e4e, #f08080, #f08080, #f08080);
     display: grid;
-    grid-template-areas: "whatsapp logo redes" "telefono horarios redes" "correo horarios redes";
-    grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 1fr 1fr 1fr; }
+    grid-template-areas: "redes  logo " "redes horarios " "redes whatsapp " "redes telefono" "redes correo";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
   .footer__logo {
     grid-area: logo;
+    max-width: 500px;
     min-width: 200px;
-    justify-self: center;
+    justify-self: flex-start;
     margin: 0; }
   .footer__horarios {
     grid-area: horarios;
-    justify-self: center;
+    justify-self: flex-start;
     text-align: center;
     align-self: center;
     margin-bottom: 1em;
     margin-top: 0em; }
   .footer__redes {
-    justify-self: end;
-    grid-area: redes;
-    align-self: center;
-    margin-right: 2em; } }
+    grid-area: redes; } }
 
 /* * ========================================================== */
 /* * ========================= Paginas ======================== */
@@ -379,6 +474,9 @@ display: grid;
   display: flex;
   justify-content: flex-end; }
 
+.fullScreen {
+  height: 75vh; }
+
 .contacto {
   display: flex;
   justify-content: center;
@@ -403,6 +501,16 @@ display: grid;
 /* * ========================================================== */
 /* * ========================= Queries ======================== */
 /* * ========================================================== */
+/* * ====================== Main 768px ======================== */
+@media only screen and (min-width: 768px) {
+  .contacto {
+    padding: 5rem;
+    width: 500px;
+    margin: auto; } }
+
+/* * ========================================================== */
+/* * ========================= Queries ======================== */
+/* * ========================================================== */
 /* * ========================================================== */
 /* * ======================== Query 768 ======================= */
 /* * ========================================================== */
@@ -417,7 +525,8 @@ display: grid;
 @media only screen and (min-width: 1024px) {
   #body__background {
     background-image: url(../media/background_light.png);
-    background-size: 25%; } }
+    background-size: 25%;
+    margin: auto; } }
 
 /* * ========================================================== */
 /* * ======================= Query 1440 ======================= */
