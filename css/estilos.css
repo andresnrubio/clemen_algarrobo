@@ -84,7 +84,7 @@
     width: 100%;
     position: 50%; }
   .portada__logo {
-    flex-basis: 64px;
+    flex-basis: 40px;
     width: 50%;
     padding-top: 2rem;
     max-width: 500px; }
@@ -121,7 +121,7 @@
     justify-self: center;
     margin: 1rem; }
     .principal__img--size {
-      max-width: 50%; }
+      max-width: 35%; }
   .principal h5 {
     font-size: 24px; }
   .principal p {
@@ -199,7 +199,7 @@
 /* * ====================== Main 768px ======================== */
 @media only screen and (min-width: 768px) {
   .portada__logo {
-    flex-basis: 64px;
+    flex-basis: 40px;
     width: 50%;
     padding-top: 2rem;
     max-width: 300px; }
@@ -209,6 +209,10 @@
     min-height: 250px; }
   .principal__img--size {
     max-width: 100%; }
+  .principal h5 {
+    font-size: 32px; }
+  .principal p {
+    font-size: 20px; }
   .resumen {
     flex-wrap: nowrap;
     margin-top: 2rem;
@@ -235,23 +239,15 @@
 
 /* * ====================== Main 1024px ======================= */
 @media only screen and (min-width: 1024px) {
-  /*       .portada {
-                &__background {}
-                &__logo {
-                    padding-top: 2rem;
-                }
-                & h1 {}
-            }
-            .principal {
-                &__card {
-                    min-height: 0;
-                }
-                &__img {
-                    &--size {
-                        max-width: 100%;
-                    }
-                }
-            } */
+  .principal__card {
+    min-height: 0;
+    overflow: hidden; }
+  .principal__img--size {
+    max-width: 75%; }
+  .principal h5 {
+    font-size: 40px; }
+  .principal p {
+    font-size: 24px; }
   .resumen {
     display: flex;
     flex-direction: row;
@@ -263,9 +259,9 @@
 /* * ====================== Main 1440px ======================= */
 @media only screen and (min-width: 1440px) {
   .principal__card {
-    min-height: 0; }
-  .principal__img--size {
-    max-width: 100%; } }
+    height: 300px; }
+  .principal__img {
+    display: flex; } }
 
 @media only screen and (min-width: 1440px) {
   main {
@@ -441,7 +437,9 @@
       font-size: 1.5rem;
       margin: 0; }
     .algarrobo__info img {
-      width: 100%; }
+      display: flex;
+      margin: auto;
+      width: 80%; }
   .algarrobo__detalle {
     display: flex;
     flex-direction: column; }
@@ -459,12 +457,6 @@
       border-radius: 0.5rem;
       background-color: #f1f1f1; }
 
-/* 
-QUERY
-
-display: grid;
-        grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
-        grid-template-columns: 100%; */
 .catalogo {
   padding: 0%;
   width: 100%;

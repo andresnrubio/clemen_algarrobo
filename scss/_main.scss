@@ -60,7 +60,7 @@
                 justify-self: center;
                 margin: 1rem;
                 &--size {
-                    max-width: 50%;
+                    max-width: 35%;
                 }
             }
             h5 {
@@ -176,6 +176,12 @@
                         max-width: 100%;
                     }
                 }
+                h5 {
+                    font-size: $f-mdl;
+                }
+                p {
+                    font-size: $f-mds;
+                }
             }
             .resumen {
                 flex-wrap: nowrap;
@@ -211,23 +217,23 @@
         /* * ====================== Main 1024px ======================= */
         
         @media only screen and (min-width: 1024px) {
-            /*       .portada {
-                &__background {}
-                &__logo {
-                    padding-top: 2rem;
-                }
-                & h1 {}
-            }
             .principal {
                 &__card {
                     min-height: 0;
+                    overflow: hidden;
                 }
                 &__img {
                     &--size {
-                        max-width: 100%;
+                        max-width: 75%;
                     }
                 }
-            } */
+                h5 {
+                    font-size: $f-lg;
+                }
+                p {
+                    font-size: $f-md;
+                }
+            }
             .resumen {
                 display: flex;
                 flex-direction: row;
@@ -243,12 +249,10 @@
         @media only screen and (min-width: 1440px) {
             .principal {
                 &__card {
-                    min-height: 0;
+                    height: 300px;
                 }
                 &__img {
-                    &--size {
-                        max-width: 100%;
-                    }
+                    display: flex;
                 }
             }
         }
