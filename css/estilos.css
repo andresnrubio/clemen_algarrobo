@@ -278,7 +278,8 @@
 .gridFooter {
   display: grid;
   grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
-  grid-template-columns: 100%; }
+  grid-template-columns: 100%;
+  padding-top: 1rem; }
 
 .footer {
   margin-top: 2rem;
@@ -363,80 +364,60 @@
 .querie1024 {
   display: none; }
 
+.querie1440 {
+  display: none; }
+
 /* * ========================================================== */
 /* * ========================= Queries ======================== */
 /* * ========================================================== */
 /* * ====================== Footer 768px ======================= */
 @media only screen and (min-width: 768px) {
-  #gridFooter {
-    display: grid;
-    grid-template-areas: "redes" "horarios" "redes" "whatsapp" "telefono" "correo";
-    grid-template-columns: 100%; }
   .querie768 {
     display: none; }
   .querie1024 {
     display: flex; }
-  /*  .footer {
-        &__whatsapp {
-            @include redes-contacto (whatsapp, flex, center, 0, 0em 0em 0em 2em);
-            justify-content: center;
-        }
-        &__telefono {
-            @include redes-contacto (telefono, flex, center, 0, 0em 0em 0em 2em);
-            justify-content: center;
-        }
-        &__correo {
-            @include redes-contacto (correo, flex, center, 0, 0em 0em 0em 2em);
-            justify-content: center;
-        }
-        &__redes {
-            @include redes-contacto (redes, 0, 0, 0, 1em 1em 1em 1em);
-            justify-content: center;
-        }
-    } */
-  /* * ====================== Footer 1024px ======================= */
-  /* 
-@media only screen and (min-width: 1024px) {
-    .footer {
-        &__logo {
-            justify-self: flex-start;
-            max-width: 100px;
-            margin-left: 2rem;
-        }
-        &__horarios {
-            grid-area: horarios;
-            text-align: center;
-            justify-self: flex-start;
-            max-width: 200px;
-            margin-left: 2rem;
-        }
-    }
-}
- */
-  /* * ====================== Footer 1440px ======================= */ }
+  .querie1440 {
+    display: none; } }
 
-@media only screen and (min-width: 768px) and (min-width: 1024px) {
-  #gridFooter {
-    background-color: linear-gradient(#d84e4e, #f08080, #f08080, #f08080);
+/* * ====================== Footer 1024px ======================= */
+@media only screen and (min-width: 1024px) {
+  .gridFooter {
     display: grid;
-    grid-template-areas: "redes  logo " "redes horarios " "redes whatsapp " "redes telefono" "redes correo";
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+    grid-template-areas: "redes . ." "redes . logo " "redes . horarios " "redes . whatsapp " "redes . telefono" "redes . correo";
+    grid-template-columns: 500px 2% calc(98% - 500px);
+    grid-template-rows: 20px 100px 130px 40px 40px 40px 30px;
+    padding: 1rem; }
   .footer__logo {
     grid-area: logo;
-    max-width: 500px;
+    max-width: 230px;
     min-width: 200px;
     justify-self: flex-start;
-    margin: 0; }
+    margin-left: 2rem;
+    margin-bottom: 2rem; }
   .footer__horarios {
     grid-area: horarios;
     justify-self: flex-start;
-    text-align: center;
-    align-self: center;
+    text-align: left;
     margin-bottom: 1em;
-    margin-top: 0em; }
+    margin-top: 0em;
+    margin-left: 2rem; }
   .footer__redes {
-    grid-area: redes; } }
+    grid-area: redes;
+    margin: 0; }
+  .footer__whatsapp {
+    justify-self: flex-start; }
+  .footer__telefono {
+    justify-self: flex-start; }
+  .footer__correo {
+    justify-self: flex-start; }
+  .querie768 {
+    display: none; }
+  .querie1024 {
+    display: none; }
+  .querie1440 {
+    margin: 0%;
+    padding: 0%;
+    display: flex; } }
 
 /* * ========================================================== */
 /* * ========================= Paginas ======================== */

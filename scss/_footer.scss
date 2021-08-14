@@ -1,170 +1,159 @@
-        /* * ========================================================== */
-        /* * ========================= Footer ========================= */
-        /* * ========================================================== */
-        
-        @mixin redes-contacto ($gridArea, $display, $align, $justify, $margin) {
-            grid-area: $gridArea;
-            display: $display;
-            align-self: $align;
-            justify-self: $justify;
-            margin: $margin;
-        }
-        
-        .gridFooter {
-            display: grid;
-            grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
-            grid-template-columns: 100%;
-        }
-        
-        .footer {
-            margin-top: 2rem;
-            background-image: $inverse-color-back-gradient;
-            & h4 {
-                font-size: $f-sm;
-                color: #212529;
-                @include redes-contacto (0, 0, center, 0, 1em 1em 0em 0em);
-            }
-            &__whatsapp {
-                @include redes-contacto (whatsapp, flex, center, 0, 0em 0em 0em 2em);
-                justify-content: center;
-                align-items: center;
-            }
-            &__telefono {
-                @include redes-contacto (telefono, flex, center, 0, 0em 0em 0em 2em);
-                justify-content: center;
-                align-items: center;
-            }
-            &__correo {
-                @include redes-contacto (correo, flex, center, 0, 0em 0em 0em 2em);
-                justify-content: center;
-                align-items: center;
-            }
-            &__redes {
-                @include redes-contacto (redes, 0, 0, 0, 1em 1em 1em 1em);
-                justify-content: center;
-            }
-            &__facebook {
-                @include redes-contacto (0, block, 0, 0, auto);
-            }
-            &__icono {
-                display: inline-flex;
-                margin: 1em 1em 0em 0em;
-                &--sm {
-                    width: 1.5em;
+                /* * ========================================================== */
+                /* * ========================= Footer ========================= */
+                /* * ========================================================== */
+                
+                @mixin redes-contacto ($gridArea, $display, $align, $justify, $margin) {
+                    grid-area: $gridArea;
+                    display: $display;
+                    align-self: $align;
+                    justify-self: $justify;
+                    margin: $margin;
                 }
-                &--md {
-                    width: 2em;
-                }
-                &--lg {
-                    width: 2.5em;
-                }
-            }
-            &__logo {
-                @include redes-contacto (logo, 0, center, center, 1em 0em 0em 0em);
-                width: 30%;
-                min-width: 150px;
-            }
-            &__horarios {
-                @include redes-contacto (horarios, 0, center, 0, 0.5em 0em 0em 0em);
-                text-align: center;
-            }
-            a {
-                text-decoration: none;
-            }
-        }
-        
-        .facebookBox {
-            display: flex;
-            iframe {
-                margin: auto;
-            }
-        }
-        
-        .querie1024 {
-            display: none;
-        }
-        /* * ========================================================== */
-        /* * ========================= Queries ======================== */
-        /* * ========================================================== */
-        /* * ====================== Footer 768px ======================= */
-        
-        @media only screen and (min-width: 768px) {
-            #gridFooter {
-                display: grid;
-                grid-template-areas: "redes" "horarios""redes" "whatsapp" "telefono" "correo";
-                grid-template-columns: 100%;
-            }
-            .querie768 {
-                display: none;
-            }
-            .querie1024 {
-                display: flex;
-            }
-            /*  .footer {
-        &__whatsapp {
-            @include redes-contacto (whatsapp, flex, center, 0, 0em 0em 0em 2em);
-            justify-content: center;
-        }
-        &__telefono {
-            @include redes-contacto (telefono, flex, center, 0, 0em 0em 0em 2em);
-            justify-content: center;
-        }
-        &__correo {
-            @include redes-contacto (correo, flex, center, 0, 0em 0em 0em 2em);
-            justify-content: center;
-        }
-        &__redes {
-            @include redes-contacto (redes, 0, 0, 0, 1em 1em 1em 1em);
-            justify-content: center;
-        }
-    } */
-            /* * ====================== Footer 1024px ======================= */
-            /* 
-@media only screen and (min-width: 1024px) {
-    .footer {
-        &__logo {
-            justify-self: flex-start;
-            max-width: 100px;
-            margin-left: 2rem;
-        }
-        &__horarios {
-            grid-area: horarios;
-            text-align: center;
-            justify-self: flex-start;
-            max-width: 200px;
-            margin-left: 2rem;
-        }
-    }
-}
- */
-            /* * ====================== Footer 1440px ======================= */
-            @media only screen and (min-width: 1024px) {
-                #gridFooter {
-                    background-color: $inverse-color-back-gradient;
+                
+                .gridFooter {
                     display: grid;
-                    grid-template-areas: "redes  logo " "redes horarios " "redes whatsapp ""redes telefono""redes correo";
-                    grid-template-columns: 40% 60%;
-                    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
+                    grid-template-columns: 100%;
+                    padding-top: 1rem;
                 }
+                
                 .footer {
-                    &__logo {
-                        grid-area: logo;
-                        max-width: 500px;
-                        min-width: 200px;
-                        justify-self: flex-start;
-                        margin: 0;
+                    margin-top: 2rem;
+                    background-image: $inverse-color-back-gradient;
+                    & h4 {
+                        font-size: $f-sm;
+                        color: #212529;
+                        @include redes-contacto (0, 0, center, 0, 1em 1em 0em 0em);
                     }
-                    &__horarios {
-                        grid-area: horarios;
-                        justify-self: flex-start;
-                        text-align: center;
-                        align-self: center;
-                        margin-bottom: 1em;
-                        margin-top: 0em;
+                    &__whatsapp {
+                        @include redes-contacto (whatsapp, flex, center, 0, 0em 0em 0em 2em);
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &__telefono {
+                        @include redes-contacto (telefono, flex, center, 0, 0em 0em 0em 2em);
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &__correo {
+                        @include redes-contacto (correo, flex, center, 0, 0em 0em 0em 2em);
+                        justify-content: center;
+                        align-items: center;
                     }
                     &__redes {
-                        grid-area: redes;
+                        @include redes-contacto (redes, 0, 0, 0, 1em 1em 1em 1em);
+                        justify-content: center;
+                    }
+                    &__facebook {
+                        @include redes-contacto (0, block, 0, 0, auto);
+                    }
+                    &__icono {
+                        display: inline-flex;
+                        margin: 1em 1em 0em 0em;
+                        &--sm {
+                            width: 1.5em;
+                        }
+                        &--md {
+                            width: 2em;
+                        }
+                        &--lg {
+                            width: 2.5em;
+                        }
+                    }
+                    &__logo {
+                        @include redes-contacto (logo, 0, center, center, 1em 0em 0em 0em);
+                        width: 30%;
+                        min-width: 150px;
+                    }
+                    &__horarios {
+                        @include redes-contacto (horarios, 0, center, 0, 0.5em 0em 0em 0em);
+                        text-align: center;
+                    }
+                    a {
+                        text-decoration: none;
                     }
                 }
-            }
-        }
+                
+                .facebookBox {
+                    display: flex;
+                    iframe {
+                        margin: auto;
+                    }
+                }
+                
+                .querie1024 {
+                    display: none;
+                }
+                
+                .querie1440 {
+                    display: none;
+                }
+                /* * ========================================================== */
+                /* * ========================= Queries ======================== */
+                /* * ========================================================== */
+                /* * ====================== Footer 768px ======================= */
+                
+                @media only screen and (min-width: 768px) {
+                    .querie768 {
+                        display: none;
+                    }
+                    .querie1024 {
+                        display: flex;
+                    }
+                    .querie1440 {
+                        display: none;
+                    }
+                }
+                /* * ====================== Footer 1024px ======================= */
+                
+                @media only screen and (min-width: 1024px) {
+                    .gridFooter {
+                        display: grid;
+                        grid-template-areas: "redes . ." "redes . logo " "redes . horarios " "redes . whatsapp ""redes . telefono" "redes . correo";
+                        grid-template-columns: 500px 2% calc(98% - 500px);
+                        grid-template-rows: 20px 100px 130px 40px 40px 40px 30px;
+                        padding: 1rem;
+                    }
+                    .footer {
+                        &__logo {
+                            grid-area: logo;
+                            max-width: 230px;
+                            min-width: 200px;
+                            justify-self: flex-start;
+                            margin-left: 2rem;
+                            margin-bottom: 2rem;
+                        }
+                        &__horarios {
+                            grid-area: horarios;
+                            justify-self: flex-start;
+                            text-align: left;
+                            margin-bottom: 1em;
+                            margin-top: 0em;
+                            margin-left: 2rem;
+                        }
+                        &__redes {
+                            grid-area: redes;
+                            margin: 0;
+                        }
+                        &__whatsapp {
+                            justify-self: flex-start;
+                        }
+                        &__telefono {
+                            justify-self: flex-start;
+                        }
+                        &__correo {
+                            justify-self: flex-start;
+                        }
+                    }
+                    .querie768 {
+                        display: none;
+                    }
+                    .querie1024 {
+                        display: none;
+                    }
+                    .querie1440 {
+                        margin: 0%;
+                        padding: 0%;
+                        display: flex;
+                    }
+                }
