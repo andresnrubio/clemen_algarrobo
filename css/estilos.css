@@ -5,6 +5,10 @@
   font-family: "Open Sans", sans-serif, "Montserrat", sans-serif;
   font-size: 16px; }
 
+.air {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
 #body__background {
   width: 100%;
   background-image: url(../media/background_light.png);
@@ -139,21 +143,22 @@
 .cardInfo {
   padding: 1em;
   align-content: center;
-  min-height: 280px;
+  height: 360px;
   margin: 1rem;
   min-width: 15rem; }
   .cardInfo img {
     max-width: 5rem; }
+  .cardInfo h5 {
+    margin-bottom: 1rem; }
   .cardInfo p {
     text-align: center; }
   .cardInfo ul {
     list-style: none;
-    margin: 0;
+    margin: auto;
     padding: 0; }
   .cardInfo li {
     text-align: center;
-    margin: 0;
-    padding: 0; }
+    padding-bottom: 1rem; }
 
 .mapa {
   display: flex;
@@ -201,20 +206,32 @@
     .portada__logo img {
       width: 100%; }
   .principal__card {
-    min-height: 0; }
+    min-height: 250px; }
   .principal__img--size {
     max-width: 100%; }
   .resumen {
-    flex-wrap: nowrap; }
+    flex-wrap: nowrap;
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
   .cardInfo {
-    max-width: 35rem;
-    max-height: 20rem; }
+    height: 350px;
+    padding-bottom: 0.2rem; }
+    .cardInfo ul {
+      list-style: none;
+      margin: auto;
+      padding: 0; }
+    .cardInfo li {
+      text-align: center;
+      padding-bottom: 0.5rem; }
   /** Modificacion clase Bootstrap**/
   .carousel {
     height: 50%; }
   .centerCarousel {
     margin: auto;
-    width: 50% !important; } }
+    width: 50% !important; }
+  .col-md-8 {
+    text-align: justify;
+    margin: auto; } }
 
 /* * ====================== Main 1024px ======================= */
 @media only screen and (min-width: 1024px) {
@@ -258,12 +275,13 @@
 /* * ========================================================== */
 /* * ========================= Footer ========================= */
 /* * ========================================================== */
-#gridFooter {
+.gridFooter {
   display: grid;
   grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
   grid-template-columns: 100%; }
 
 .footer {
+  margin-top: 2rem;
   background-image: linear-gradient(#d84e4e, #f08080, #f08080, #f08080); }
   .footer h4 {
     font-size: 16px;
@@ -342,6 +360,9 @@
   .facebookBox iframe {
     margin: auto; }
 
+.querie1024 {
+  display: none; }
+
 /* * ========================================================== */
 /* * ========================= Queries ======================== */
 /* * ========================================================== */
@@ -351,6 +372,10 @@
     display: grid;
     grid-template-areas: "redes" "horarios" "redes" "whatsapp" "telefono" "correo";
     grid-template-columns: 100%; }
+  .querie768 {
+    display: none; }
+  .querie1024 {
+    display: flex; }
   /*  .footer {
         &__whatsapp {
             @include redes-contacto (whatsapp, flex, center, 0, 0em 0em 0em 2em);

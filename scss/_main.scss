@@ -90,24 +90,26 @@
         .cardInfo {
             padding: 1em;
             align-content: center;
-            min-height: 280px;
+            height: 360px;
             margin: 1rem;
             min-width: 15rem;
             img {
                 max-width: 5rem;
+            }
+            h5 {
+                margin-bottom: 1rem;
             }
             p {
                 text-align: center;
             }
             ul {
                 list-style: none;
-                margin: 0;
+                margin: auto;
                 padding: 0;
             }
             li {
                 text-align: center;
-                margin: 0;
-                padding: 0;
+                padding-bottom: 1rem;
             }
         }
         
@@ -167,7 +169,7 @@
             }
             .principal {
                 &__card {
-                    min-height: 0;
+                    min-height: 250px;
                 }
                 &__img {
                     &--size {
@@ -177,10 +179,21 @@
             }
             .resumen {
                 flex-wrap: nowrap;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
             }
             .cardInfo {
-                max-width: 35rem;
-                max-height: 20rem;
+                height: 350px;
+                padding-bottom: 0.2rem;
+                ul {
+                    list-style: none;
+                    margin: auto;
+                    padding: 0;
+                }
+                li {
+                    text-align: center;
+                    padding-bottom: 0.5rem;
+                }
             }
             /** Modificacion clase Bootstrap**/
             .carousel {
@@ -189,6 +202,10 @@
             .centerCarousel {
                 margin: auto;
                 width: 50%!important;
+            }
+            .col-md-8 {
+                text-align: justify;
+                margin: auto;
             }
         }
         /* * ====================== Main 1024px ======================= */

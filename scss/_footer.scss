@@ -10,13 +10,14 @@
             margin: $margin;
         }
         
-        #gridFooter {
+        .gridFooter {
             display: grid;
             grid-template-areas: "logo" "horarios" "whatsapp" "telefono" "correo" "redes";
             grid-template-columns: 100%;
         }
         
         .footer {
+            margin-top: 2rem;
             background-image: $inverse-color-back-gradient;
             & h4 {
                 font-size: $f-sm;
@@ -78,6 +79,10 @@
                 margin: auto;
             }
         }
+        
+        .querie1024 {
+            display: none;
+        }
         /* * ========================================================== */
         /* * ========================= Queries ======================== */
         /* * ========================================================== */
@@ -88,6 +93,12 @@
                 display: grid;
                 grid-template-areas: "redes" "horarios""redes" "whatsapp" "telefono" "correo";
                 grid-template-columns: 100%;
+            }
+            .querie768 {
+                display: none;
+            }
+            .querie1024 {
+                display: flex;
             }
             /*  .footer {
         &__whatsapp {
