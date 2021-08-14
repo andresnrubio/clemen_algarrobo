@@ -1,21 +1,49 @@
-.algarrobo {
-    font-family: $f--main;
-    &__info {
-        display: flex;
-        flex-direction: column;
-        img {
-            width: 100%;
-            margin: 1rem;
+    .algarrobo {
+        font-family: $f--main;
+        margin: 1rem;
+        &__info {
+            h1 {
+                align-self: center;
+                font-family: $f--title;
+                font-size: $f-lg;
+            }
+            h2 {
+                font-family: $f--title;
+                font-size: 1.5rem;
+                margin: 0;
+            }
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            background-color: #f1f1f1;
+            margin-bottom: 2rem;
+            img {
+                width: 100%;
+            }
+        }
+        &__detalle {
+            display: flex;
+            flex-direction: column;
+            h3 {
+                font-family: $f--title;
+                font-size: 1.5rem;
+                margin: 0;
+            }
+            &__1 {
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                background-color: #f1f1f1;
+                margin-bottom: 2rem;
+            }
+            &__2 {
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                background-color: #f1f1f1;
+            }
         }
     }
-    &__detalle {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-
-/* 
+    /* 
 QUERY
 
 display: grid;
